@@ -22,7 +22,7 @@ collections_dir: 'collections'
 collections:
   pages:
     output: true
-    permalink: /:title/
+    permalink: /:slug
   projects:
     output: true
     permalink: /project/:slug
@@ -33,7 +33,7 @@ collections:
     permalink: /blog/:slug
   es-pages:
     output: true
-    permalink: /es/:title/
+    permalink: /es/:slug/
   es-projects:
     output: true
     permalink: /es/project/:slug
@@ -50,12 +50,12 @@ defaults:
       layout: default
   - scope:
       type: pages
-      path: _pages/index.html
+      path: _pages/index.md
     values:
       permalink: /
   - scope:
       type: es-pages
-      path: _es-pages/index.html
+      path: _es-pages/index.md
     values:
       permalink: /es/
   - scope:
