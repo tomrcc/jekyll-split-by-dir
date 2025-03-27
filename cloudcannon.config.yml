@@ -22,6 +22,18 @@ collections_config:
     schemas:
       default:
         path: site/schemas/post.md
+  es_posts:
+    path: collections/_es-posts
+    url: /es/blog/[full_slug]/
+    create:
+      path: >-
+        [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: site/schemas/post.md
   pages:
     path: collections/_pages
     url: /[full_slug]/
@@ -45,6 +57,17 @@ collections_config:
   projects:
     path: collections/_projects
     url: /project/[full_slug]/
+    description: ''
+    icon: work_outline
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: site/schemas/project.md
+  es_projects:
+    path: collections/_es-projects
+    url: /es/project/[full_slug]/
     description: ''
     icon: work_outline
     disable_add: false
@@ -77,6 +100,30 @@ collections_config:
     schemas:
       default:
         path: site/schemas/testimonial.md
+  es_testimonials:
+    path: collections/_es-testimonials
+    disable_url: true
+    icon: format_quote
+    sort:
+      key: name
+    sort_options:
+      - key: name
+      - key: name
+        order: desc
+      - key: position
+      - key: position
+        order: desc
+    preview:
+      subtext:
+        - key: position
+    _enabled_editors:
+      - data
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: site/schemas/testimonial.md
   drafts:
     path: collections/_drafts
     create:
@@ -84,17 +131,28 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+  es_drafts:
+    path: collections/_es-drafts
+    create:
+      publish_to: es_posts
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
 collection_groups:
-  - heading: Content
+  - heading: English
     collections:
       - pages
-      - es_pages
       - projects
       - testimonials
-  - heading: Blogging
-    collections:
       - posts
       - drafts
+  - heading: Spanish
+    collections:
+      - es_pages
+      - es_projects
+      - es_testimonials
+      - es_posts
+      - es_drafts
   - heading: Settings
     collections:
       - data
