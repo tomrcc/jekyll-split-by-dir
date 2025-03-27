@@ -31,6 +31,17 @@ collections:
   posts:
     output: true
     permalink: /blog/:slug
+  es-pages:
+    output: true
+    permalink: /es/:title/
+  es-projects:
+    output: true
+    permalink: /es/project/:slug
+  es-testimonials:
+    output: false
+  es-posts:
+    output: true
+    permalink: /es/blog/:slug
 
 defaults:
   - scope:
@@ -43,11 +54,24 @@ defaults:
     values:
       permalink: /
   - scope:
+      type: es-pages
+      path: _es-pages/index.html
+    values:
+      permalink: /es/
+  - scope:
       type: projects
     values:
       layout: project
   - scope:
+      type: es-projects
+    values:
+      layout: project
+  - scope:
       type: posts
+    values:
+      layout: post
+  - scope:
+      type: es-posts
     values:
       layout: post
 
