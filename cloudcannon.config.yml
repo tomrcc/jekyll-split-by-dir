@@ -88,6 +88,7 @@ collection_groups:
   - heading: Content
     collections:
       - pages
+      - es_pages
       - projects
       - testimonials
   - heading: Blogging
