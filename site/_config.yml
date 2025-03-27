@@ -22,26 +22,26 @@ collections_dir: 'collections'
 collections:
   pages:
     output: true
-    permalink: /:name
+    permalink: /:name/
   projects:
     output: true
-    permalink: /project/:name
+    permalink: /project/:name/
   testimonials:
     output: false
   posts:
     output: true
-    permalink: /blog/:name
+    permalink: /blog/:name/
   es-pages:
     output: true
     permalink: /es/:name
   es-projects:
     output: true
-    permalink: /es/project/:name
+    permalink: /es/project/:name/
   es-testimonials:
     output: false
   es-posts:
     output: true
-    permalink: /es/blog/:name
+    permalink: /es/blog/:name/
 
 defaults:
   - scope:
