@@ -12,7 +12,7 @@ collections_config:
     disable_file_actions: false
   posts:
     path: collections/_posts
-    url: /posts/[full_slug]/
+    url: /blog/[full_slug]/
     create:
       path: >-
         [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
@@ -44,7 +44,7 @@ collections_config:
         path: site/schemas/page.html
   projects:
     path: collections/_projects
-    url: /projects/[full_slug]/
+    url: /project/[full_slug]/
     description: ''
     icon: work_outline
     disable_add: false
