@@ -33,7 +33,7 @@ collections:
     permalink: /blog/:name/
   es-pages:
     output: true
-    permalink: /es/:name
+    permalink: /es/:name/
   es-projects:
     output: true
     permalink: /es/project/:name/
