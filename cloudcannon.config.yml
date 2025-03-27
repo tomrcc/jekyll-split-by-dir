@@ -43,7 +43,7 @@ collections_config:
     disable_file_actions: false
     schemas:
       default:
-        path: site/schemas/page.html
+        path: site/schemas/page.md
   es_pages:
     path: collections/_es-pages
     url: /es/[full_slug]/
@@ -53,7 +53,7 @@ collections_config:
     disable_file_actions: false
     schemas:
       default:
-        path: site/schemas/page.html
+        path: site/schemas/page.md
   projects:
     path: collections/_projects
     url: /project/[full_slug]/
